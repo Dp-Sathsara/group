@@ -1,0 +1,75 @@
+<mxfile>
+  <diagram name="Fitness Center Management System">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Member Entity -->
+        <mxCell id="2" value="Member" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="MembershipID, Name, PhoneNumber, Address, MembershipStartDate" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Guardian Entity -->
+        <mxCell id="4" value="Guardian" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="NICNumber, Name, Address, RelationshipToMember" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Trainer Entity -->
+        <mxCell id="6" value="Trainer" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="TrainerID, Name, HireDate, Specialization" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- FitnessClass Entity -->
+        <mxCell id="8" value="FitnessClass" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="ClassID, Day, Time, Location" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Equipment Entity -->
+        <mxCell id="10" value="Equipment" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="EquipmentID, EquipmentName" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- EquipmentUsage Entity -->
+        <mxCell id="12" value="EquipmentUsage" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="UsageID, MemberID, EquipmentID, StartTime, EndTime" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Relationships -->
+        <mxCell id="14" value="Member-Guardian" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Trainer-FitnessClass" edge="1" parent="1" source="6" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Member-FitnessClass" edge="1" parent="1" source="2" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Member-EquipmentUsage" edge="1" parent="1" source="2" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Equipment-EquipmentUsage" edge="1" parent="1" source="10" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
